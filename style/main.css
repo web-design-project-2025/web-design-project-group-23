@@ -5,6 +5,7 @@ body {
 
 footer {
   background-color: #ff4800;
+  display: flex;
 }
 
 .headerlogo{
