@@ -1,5 +1,5 @@
 body {
-  background-color: #1d2d33;
+  background-color: #192428;
   margin: 0;
 }
 
@@ -11,44 +11,52 @@ footer {
   gap: 25rem;
   padding-right: 10%;
   color: white;
+  position: sticky;
 }
-
 
 /* Copyright text */
 footer p {
-font-family: "Source Sans 3", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
 }
 
 footer ul {
-list-style: none;
-font-family: "Source Sans 3", sans-serif;
-padding: 0;
+  list-style: none;
+  font-family: "Source Sans 3", sans-serif;
+  padding: 0;
 }
 
 /* link texts */
 footer a {
-text-decoration: none;
-color: white;
-font-family: "Source Sans 3", sans-serif;
+  text-decoration: none;
+  color: white;
+  font-family: "Source Sans 3", sans-serif;
 }
 
-footer h3{
-font-family: "Source Sans 3", sans-serif;
-
+footer h3 {
+  font-family: "Source Sans 3", sans-serif;
 }
-
 
 /* title header */
-header{
-padding: 1em;
+header {
+  padding: 1em;
 }
 
-.headerlogo{
-font-family: Medium;
-color: white;
+nav p {
+  font-family: medium;
+  color: #ff4800;
 }
 
-.footer-column{
+nav {
+  background-color: #1d2d33;
+  padding: 1%;
+  margin: 0%;
+}
+.headerlogo {
+  font-family: Medium;
+  color: white;
+}
+
+.footer-column {
   display: flex;
   flex-direction: row;
   gap: 1em;
