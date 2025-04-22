@@ -41,6 +41,17 @@ header {
   padding: 1em;
 }
 
+/* icons in header */
+.icons {
+  display: flex;
+  margin: 0;
+  gap: 0.5em;
+  padding: 0%;
+}
+.icons img {
+  width: 25px;
+}
+
 nav p {
   font-family: medium;
   color: #ff4800;
@@ -68,12 +79,13 @@ nav a {
   gap: 1em;
 }
 
-.icons {
-  display: flex;
-  margin: 0;
-  padding: 0%;
+/* Planner Page */
+.planner{
+  text-decoration: none;
+  color: white;
+  font-family: "Source Sans 3", sans-serif;
 }
 
-.icons img {
-  width: 25px;
+.button{
+display: flex;
 }
