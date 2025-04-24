@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
+    <script src="/js/init.js"></script>
   </head>
 
   <body>
@@ -38,7 +39,13 @@
         </tr>
 
         <!-- Input fields -->
-        <td><select name="selection" id="exerciseList"></select></td>
+        <td>
+          <select
+            name="selection"
+            id="exerciseList"
+            onload="loadExercises();"
+          ></select>
+        </td>
         <td><input type="number" /></td>
         <td><input type="number" /></td>
         <td><input type="number" /></td>
@@ -72,5 +79,6 @@
         </ul>
       </div>
     </footer>
+    <script src="/js/loadHandler.js"></script>
   </body>
 </html>
