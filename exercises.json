@@ -4,5 +4,12 @@
     "sets": "4",
     "reps": "12",
     "weight": "50"
+  },
+
+  {
+    "name": "Push Ups",
+    "sets": "3",
+    "reps": "10",
+    "weight": "0"
   }
 ]
