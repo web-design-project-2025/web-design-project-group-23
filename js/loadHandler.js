@@ -27,12 +27,11 @@ async function loadExercises() {
     let i = 0;
     let select = document.getElementById("exerciseList");
 
-    array.forEach(exercises => {
+    array.forEach((exercise) => {
       let option = document.createElement("option");
-      option.value = exercises[i].name;
-      i++;
+      option.value = exercise.name;
+      option.textContent = exercise.name;
       select.appendChild(option);
-
     });
     return exercises;
   } catch (error) {
@@ -40,3 +39,7 @@ async function loadExercises() {
     return [];
   }
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  loadExercises();
+});
