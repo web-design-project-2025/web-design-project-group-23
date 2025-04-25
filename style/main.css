@@ -39,6 +39,7 @@ footer h3 {
 /* title header */
 header {
   padding: 1em;
+  font-size: 45px;
 }
 
 /* icons in header */
@@ -54,7 +55,7 @@ header {
 
 nav p {
   font-family: medium;
-  color: #ff4800;
+  color: #ffffff;
 }
 
 nav {
@@ -80,12 +81,48 @@ nav a {
 }
 
 /* Planner Page */
-.planner{
+.planner {
   text-decoration: none;
   color: white;
   font-family: "Source Sans 3", sans-serif;
 }
 
-.button{
-display: flex;
+.button {
+  display: flex;
+}
+
+.ss {
+  color: white;
+  font-family: "Source Sans 3", sans-serif;
+  padding: 0.5em;
+  font-size: 40px;
+}
+
+.lifestyle {
+  color: #ffffff;
+  font-family: "Source Sans 3, sans-serif";
+}
+
+.select {
+  font-family: "Source Sans 3", sans-serif;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: #1d2d33;
+  color: #ffffff;
+  text-align: center;
+}
+
+table.planner {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table.planner th,
+table.planner td {
+  text-align: center;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 30;
 }
