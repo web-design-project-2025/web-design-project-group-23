@@ -2,4 +2,105 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, i
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/main.css" />
+    <title>Shape Tale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/js/init.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <img src="/icons/mainlogo.png" alt="Shapetale Logo" width="250" />
+      <div class="profileCircle" id="profileCircle"></div>
+    </header>
+    <nav>
+      <p>profile</p>
+      <div class="icons">
+        <a href=""><img src="/icons/workout.png" alt="" /></a>
+        <a href="planner.html"><img src="/icons/schedule.png" alt="" /></a>
+        <a href=""><img src="/icons/home.png" alt="" /></a>
+        <a href=""><img src="/icons/diary.png" alt="" /></a>
+        <a href=""><img src="/icons/user.png" alt="" /></a>
+        <a href=""><img src="/icons/settings.png" alt="" /></a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="circle" id="mainCircle"></div>
+
+      <!-----Email-->
+      <section class="email-section">
+        <h2>Email Adress</h2>
+        <p id="current-email">Erik.svensson@exempel.com</p>
+        <button id="edit-email-btn" class="button-style" >Edit Email</button>
+        <div id="email-edit" style="display: none; margin-top: 1rem">
+          <input type="email" id="new-email" placeholder="Enter a new email" />
+          <button id="save-email-btn" class="button-style">Save</button>
+        </div>
+      </section>
+
+      <!---Weight and height-->
+       <section class="stats-section">
+        <h2>Stats</h2>
+
+        <div class="stats-values">
+            <div class="stat">
+                <label for="height">Height (cm)</label>
+                <input type="text" id="height" placeholder="e.g. 170"/>
+            </div>
+
+            <div class="stat">
+                <label for="weight">Weight (kg)</label>
+                <input type="text" id="weight" placeholder="e.g 75" />
+            </div>
+        </div>
+
+        <button id="save-stats-btn" class="button-style">Save Stats</button>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+    </main>
+    </section>
+
+    <footer>
+      <div id="footer-column">
+        <p>© 2025 ShapeTale AB</p>
+      </div>
+
+      <div id="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <a href=""><li>Customer Service</li></a>
+          <a href=""><li>Careers</li></a>
+          <a href=""><li>Terms of Service</li></a>
+        </ul>
+      </div>
+
+      <div id="footer-column">
+        <h3>About Us</h3>
+        <ul>
+          <a href=""><li>Our Mission</li></a>
+          <a href=""><li>Our Partners</li></a>
+          <a href=""><li>Data Collection</li></a>
+        </ul>
+      </div>
+    </footer>
+ 
+    <script src="/js/initials.js"></script>
+    <script src="/js/email.js"></script>
+
+    <script src="/js/loadHandler.js"></script>
+    
+  </body>
+</html>
