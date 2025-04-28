@@ -43,3 +43,9 @@ async function loadExercises() {
 window.addEventListener("DOMContentLoaded", () => {
   loadExercises();
 });
+
+
+
+
+
+
