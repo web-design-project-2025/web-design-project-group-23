@@ -1,0 +1,25 @@
+[
+  {
+    "userId": "0",
+    "name": "Bench Press",
+    "weight": "20kg",
+    "set": "2",
+    "reps": "10"
+  },
+
+  {
+    "userId": "0",
+    "name": "Squat",
+    "weight": "20kg",
+    "set": "2",
+    "reps": "10"
+  },
+
+  {
+    "userId": "0",
+    "name": "Dumbbell Curl",
+    "weight": "20kg",
+    "set": "2",
+    "reps": "10"
+  }
+]

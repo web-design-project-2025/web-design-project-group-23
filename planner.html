@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
+    <script src="/js/init.js"></script>
   </head>
 
   <body>
@@ -32,21 +33,23 @@
       <table class="planner">
         <tr>
           <th>Exercise</th>
-          <th>Sets x Reps</th>
-          <th>Weight</th>
-          <th>Duration (Minutes)</th>
+          <th>Sets</th>
+          <th>Reps</th>
+          <th>Weight (kg)</th>
+          <th>Duration (min)</th>
         </tr>
 
         <!-- Input fields -->
-        <td><input type="text" name="Type Here..." id="" /></td>
-        <td><input type="number" /></td>
-        <td><input type="number" /></td>
-        <td><input type="number" /></td>
-        <td><button>Confirm &checkmark;</button></td>
+        <td>
+          <select name="selection" id="exerciseList"></select>
+        </td>
+        <td><input id="sets" type="number"/></td>
+        <td><input id="reps" type="number"/></td>
+        <td><input id="weight" type="number"/></td>
+        <td><input id="duration" type="number"/></td>
+        <td><button id="confirmButton">Confirm &checkmark;</button></td>
       </table>
-      <button class="button">Add Exercise &plus;</button>
-
-      &plus; &checkmark;
+      <button class="button">&plus;</button>
     </main>
 
     <footer>
@@ -72,5 +75,7 @@
         </ul>
       </div>
     </footer>
+    <script src="/js/loadHandler.js"></script>
+    <script src="/js/saveWorkout.js" ></script>
   </body>
 </html>
