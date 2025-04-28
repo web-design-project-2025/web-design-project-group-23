@@ -21,8 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     localStorage.setItem('workoutData', JSON.stringify(workoutData));
 
-
-    
     });
     
     });
