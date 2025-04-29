@@ -13,7 +13,10 @@ newRow.innerHTML = `<td>
         <td><input class="duration" type="number" /></td>
 `;
 
+loadExercises();
+
 table.appendChild(newRow);
+
 
 }
 
