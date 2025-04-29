@@ -4,14 +4,13 @@ const table = document.querySelector(".planner");
 
 const newRow = document.createElement("tr");
 
-newRow.innerHTML = `        <td>
-          <select name="selection" id="exerciseList"></select>
+newRow.innerHTML = `<td>
+          <select name="selection" class="exerciseList"></select>
         </td>
-        <td><input id="sets" type="number"/></td>
-        <td><input id="reps" type="number"/></td>
-        <td><input id="weight" type="number"/></td>
-        <td><input id="duration" type="number"/></td>
-        <td><button id="confirmButton">Confirm &checkmark;</button></td>
+        <td><input class="sets" type="number" /></td>
+        <td><input class="reps" type="number" /></td>
+        <td><input class="weight" type="number" /></td>
+        <td><input class="duration" type="number" /></td>
 `;
 
 table.appendChild(newRow);
