@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     confirmButton.addEventListener('click', () => {
     
-    const exercise = document.getElementById('exerciseList').value;
-    const sets = document.getElementById('sets').value;
-    const reps = document.getElementById('reps').value;
-    const weight = document.getElementById('weight').value;
-    const duration = document.getElementById('duration').value;
+    const exercise = document.querySelector('.exerciseList').value;
+    const sets = document.querySelector('.sets').value;
+    const reps = document.querySelector('.reps').value;
+    const weight = document.querySelector('.weight').value;
+    const duration = document.querySelector('.duration').value;
     
     const workoutData = {
     

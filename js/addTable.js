@@ -20,4 +20,4 @@ table.appendChild(newRow);
 
 }
 
-document.querySelector(".button").addEventListener("click",addRow);
+document.querySelector("#addButton").addEventListener("click",addRow);
