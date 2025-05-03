@@ -1,10 +1,9 @@
 function addRow() {
+  const table = document.querySelector(".planner");
 
-const table = document.querySelector(".planner");
+  const newRow = document.createElement("tr");
 
-const newRow = document.createElement("tr");
-
-newRow.innerHTML = `<td>
+  newRow.innerHTML = `<td>
           <select name="selection" class="exerciseList"></select>
         </td>
         <td><input class="sets" type="number" /></td>
@@ -13,11 +12,15 @@ newRow.innerHTML = `<td>
         <td><input class="duration" type="number" /></td>
 `;
 
-loadExercises();
+  const selectors = document.querySelectorAll(".exerciseList");
 
-table.appendChild(newRow);
+  for (let i = 0; i < selectors.length; i++) {
+    selectors[i].innerHTML = "";
+  }
 
+  loadExercises();
 
+  table.appendChild(newRow);
 }
 
-document.querySelector("#addButton").addEventListener("click",addRow);
+document.querySelector("#addButton").addEventListener("click", addRow);
