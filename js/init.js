@@ -1,5 +1,3 @@
-document.addEventListener('DOMContentLoaded', async () => {
-
-const exercises = await loadWorkouts();
-
-} );
+document.addEventListener("DOMContentLoaded", async () => {
+  const exercises = await loadWorkouts();
+});

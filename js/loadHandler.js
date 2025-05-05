@@ -16,7 +16,7 @@ async function loadWorkouts() {
 
 async function loadExercises() {
   try {
-    const response = await fetch("/exercises.json");
+    const response = await fetch("exercises.json");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -24,19 +24,28 @@ async function loadExercises() {
     const exercises = await response.json();
     console.log("Loaded workouts:", exercises);
 
-    let i = 0;
-    let select = document.getElementById("exerciseList");
+    const select = document.getElementById("exerciseList");
 
-    array.forEach(exercises => {
+    exercises.forEach((exercise) => {
       let option = document.createElement("option");
-      option.value = exercises[i].name;
-      i++;
+      option.value = exercise.name;
+      option.textContent = exercise.name;
       select.appendChild(option);
-
     });
+    
     return exercises;
   } catch (error) {
     console.error("Failed to load workouts:", error);
     return [];
   }
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  loadExercises();
+});
+
+
+
+
+
+
