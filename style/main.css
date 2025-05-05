@@ -43,7 +43,7 @@ header {
   justify-content: space-between;
 }
 
-.profileCircle{
+.profileCircle {
   display: flex;
   width: 50px;
   height: 50px;
@@ -96,23 +96,18 @@ nav a {
 }
 
 /* Planner Page */
-.planner{
+.planner {
   text-decoration: none;
   color: white;
   font-family: "Source Sans 3", sans-serif;
 }
 
-
-=======
-.button{
-display: flex;
+.button {
+  display: flex;
 }
 
-
-
-
 /* Profile Page */
-.circle{
+.circle {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -128,17 +123,15 @@ display: flex;
   font-size: xx-large;
 }
 
-
 /* Calendar Page */
-main{
+main {
   min-height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
-.calendar{
+.calendar {
   margin: 2%;
   display: flex;
   width: 50%;
@@ -151,20 +144,20 @@ main{
   color: white;
 }
 
-.calendarHeader{
+.calendarHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
 }
 
-.monthYear{
+.monthYear {
   text-align: center;
   font-weight: 600;
   width: 150px;
 }
 
-.calendarHeader button{
+.calendarHeader button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -179,11 +172,11 @@ main{
   font-size: xx-large;
 }
 
-.days{
+.days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 }
-.day{
+.day {
   text-align: center;
   padding: 5px;
   color: white;
@@ -198,7 +191,7 @@ main{
   color: white;
 }
 
-.date{
+.date {
   display: flex;
   padding: 10px;
   margin: auto;
@@ -210,23 +203,21 @@ main{
   transition: 0.2s;
 }
 
-
 .date:hover:not(.active) {
   background: #ff4800;
   color: rgb(255, 255, 255);
 }
 /* Today's date is white with orange text */
-.date.active{
+.date.active {
   background: #ffff;
   color: #ff4800;
 }
-.date.inactive{
+.date.inactive {
   color: white;
 }
-.date.inactive:hover{
+.date.inactive:hover {
   color: white;
 }
-
 
 /* Popup styling */
 .popup {
