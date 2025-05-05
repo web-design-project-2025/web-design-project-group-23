@@ -4,6 +4,10 @@ const datesElement = document.getElementById('dates');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
+const popup = document.getElementById('popup');
+const popupText = document.getElementById('popupText');
+const closePopup = document.getElementById('closePopup');
+
 let currentDate = new Date();
 
 const updateCalendar = () => {
@@ -31,7 +35,7 @@ const updateCalendar = () => {
     // Current month dates
     for (let i = 1; i <= totalDays; i++){
         const date = new Date(currentYear, currentMonth, i);
-    // the following line of code was adapted by the help of: https://chatgpt.com/share/680f6a47-4740-800b-a612-e8aa6d3de150 
+        //  https://chatgpt.com/c/68189962-8d2c-800b-8538-afb057a0dfa7
         const dateStr = date.toISOString().split('T')[0];
         const activeClass = date.toDateString() === new Date().toDateString() ? 'active' : '';
         datesHTML += `<div class="date ${activeClass}" data-date="${dateStr}">${i}</div>`;
@@ -43,8 +47,19 @@ const updateCalendar = () => {
         datesHTML += `<div class = "date inactive"> ${nextDate.getDate()}</div>`;
     }
     datesElement.innerHTML = datesHTML;
+    
+    const dateElements = datesElement.querySelectorAll('.date:not(.inactive)');
+
+    dateElements.forEach(dateEl => {
+        dateEl.addEventListener('click', () => {
+            const selectedDate = dateEl.getAttribute('data-date'); 
+        popupText.textContent = `You clicked on: ${selectedDate}`;
+        popup.classList.remove('hidden');
+    });
+});
 }
 
+// Navigation buttons on the calendar for months
 prevBtn.addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() - 1 );
     updateCalendar();
@@ -53,6 +68,11 @@ prevBtn.addEventListener('click', () => {
 nextBtn.addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() + 1 );
     updateCalendar();
+});
+
+// Close popup
+closePopup.addEventListener('click', () => {
+    popup.classList.add('hidden');
 });
 
 updateCalendar();
