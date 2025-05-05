@@ -125,3 +125,139 @@ display: flex;
   font-weight: bold;
   font-size: xx-large;
 }
+
+
+/* Calendar Page */
+main{
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.calendar{
+  margin: 2%;
+  display: flex;
+  width: 50%;
+  height: auto;
+  flex-direction: column;
+  padding: 10px;
+  background: #1d2d33;
+  border-radius: 10px;
+  font-family: "Source Sans 3", sans-serif;
+  color: white;
+}
+
+.calendarHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.monthYear{
+  text-align: center;
+  font-weight: 600;
+  width: 150px;
+}
+
+.calendarHeader button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: #ff4800;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  font-family: "Source Sans 3", sans-serif;
+  color: white;
+  font-size: xx-large;
+}
+
+.days{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.day{
+  text-align: center;
+  padding: 5px;
+  color: white;
+  font-weight: 500;
+}
+
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  font-family: "Source Sans 3", sans-serif;
+  color: white;
+}
+
+.date{
+  display: flex;
+  padding: 10px;
+  margin: auto;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 10%;
+  width: 40px;
+  height: 50px;
+  transition: 0.2s;
+}
+
+
+.date:hover:not(.active) {
+  background: #ff4800;
+  color: rgb(255, 255, 255);
+}
+/* Today's date is white with orange text */
+.date.active{
+  background: #ffff;
+  color: #ff4800;
+}
+.date.inactive{
+  color: white;
+}
+.date.inactive:hover{
+  color: white;
+}
+
+
+/* Popup styling */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup-content {
+  background: #1d2d33;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  width: 300px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
