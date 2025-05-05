@@ -24,15 +24,19 @@ async function loadExercises() {
     const exercises = await response.json();
     console.log("Loaded workouts:", exercises);
 
-    const select = document.getElementById("exerciseList");
+    const selectElements = document.getElementsByClassName("exerciseList");
 
-    exercises.forEach((exercise) => {
-      let option = document.createElement("option");
-      option.value = exercise.name;
-      option.textContent = exercise.name;
-      select.appendChild(option);
-    });
-    
+for (let select of selectElements) {
+
+  exercises.forEach((exercise) => {
+    let option = document.createElement("option");
+    option.value = exercise.name;
+    option.textContent = exercise.name;
+    select.appendChild(option);
+  });
+  
+}
+
     return exercises;
   } catch (error) {
     console.error("Failed to load workouts:", error);
