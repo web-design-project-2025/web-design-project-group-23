@@ -285,3 +285,47 @@ main {
 .hidden{
   display: none;
 }
+
+
+
+
+/* News Page */
+
+.contentLayout{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: #ffff;
+  background-color: #1d2d33;
+  border-radius: 8px;
+}
+
+.mainArticle{
+  max-width: 800px;
+  flex: 1;
+  line-height: 1.6;
+}
+
+main h1{
+  font-family: medium;
+  color: #ff4800;
+}
+main h2, main h3{
+  margin-top: 2rem;
+  color: #ffff;
+}
+
+main p{
+  margin-bottom: 1,5rem;
+}
+
+body{
+  overflow-y: scroll;
+  background-color: #192428;
+}
