@@ -306,6 +306,10 @@ main {
   padding: 1rem;
 }
 
+.sidebar img{
+  max-width: 100%;
+}
+
 .contentLayout{
   display: flex;
   justify-content: center;
@@ -322,24 +326,38 @@ main {
 }
 
 .mainArticle{
-  max-width: 800px;
+  max-width: 1000px;
   flex: 1;
   text-align: justify;
   line-height: 1.6;
+}
+
+.mainArticle img{
+  max-width: 100%;
 }
 
 main h1{
   font-family: medium;
   color: #ff4800;
 }
-main h2, main h3{
-  margin-top: 2rem;
+main h2{
+  margin-top: 1rem;
   margin-bottom: 0rem;
-  color: #ffff;
+  font-size: xx-large;
+  color: #ff4800;
+} 
+
+
+main h3{
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  font-size: x-large;
+  color: #ff4800;
 }
 
 main p{
-  margin-bottom: 1rem;
+  margin-top: 0%;
+  margin-bottom: 2rem;
 }
 
 body{
