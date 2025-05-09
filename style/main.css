@@ -247,13 +247,13 @@ main {
   position: relative;
 }
 
-.popup-content p{
+.popup-content p {
   font-size: large;
   margin: 0;
   font-family: "Source Sans 3", sans-serif;
 }
 
-#addExerciseBtn{
+#addExerciseBtn {
   background-color: #ff4800;
   font-family: "Source Sans 3", sans-serif;
   color: #ffff;
@@ -261,12 +261,12 @@ main {
   border: 0;
   text-decoration: none;
 }
-#addExerciseBtn a{
+#addExerciseBtn a {
   text-decoration: none;
   color: #ffff;
 }
 
-#restBtn{
+#restBtn {
   background-color: #ffffff;
   font-family: "Source Sans 3", sans-serif;
   color: #ff4800;
@@ -282,12 +282,15 @@ main {
   cursor: pointer;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
+.dw{
 
+color: #ffffff;
 
+}
 
 /* News Page */
 
