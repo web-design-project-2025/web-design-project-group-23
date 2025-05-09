@@ -310,34 +310,34 @@ color: #ffffff;
   border-radius: 8px;
 }
 
-.mainArticle{
+.article{
   max-width: 1000px;
   flex: 1;
   text-align: justify;
   line-height: 1.6;
 }
-.mainArticle img{
+.article img{
   max-width: 100%;
 }
 
-main h1{
+.newsh1{
   font-family: medium;
   color: #ff4800;
 }
-main h2{
+.newsh2{
   margin-top: 1rem;
   margin-bottom: 0rem;
   font-size: xx-large;
   color: #ff4800;
 } 
-main h3{
+.newsh3{
   margin-top: 1rem;
   margin-bottom: 0rem;
   font-size: x-large;
   color: #ff4800;
 }
 
-main p{
+.articleText{
   margin-top: 0%;
   margin-bottom: 2rem;
 }
