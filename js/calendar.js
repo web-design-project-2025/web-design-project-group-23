@@ -1,4 +1,5 @@
 // Calendar
+// The following lines was adapted from: https://www.youtube.com/watch?v=OcncrLyddAs
 const monthYearElement = document.getElementById('monthYear');
 const datesElement = document.getElementById('dates');
 const prevBtn = document.getElementById('prevBtn');
@@ -35,7 +36,7 @@ const updateCalendar = () => {
     // Current month dates
     for (let i = 1; i <= totalDays; i++){
         const date = new Date(currentYear, currentMonth, i);
-        //  https://chatgpt.com/c/68189962-8d2c-800b-8538-afb057a0dfa7
+        // The following line of code was asapted from: https://chatgpt.com/c/68189962-8d2c-800b-8538-afb057a0dfa7
         const dateStr = date.toISOString().split('T')[0];
         const activeClass = date.toDateString() === new Date().toDateString() ? 'active' : '';
         datesHTML += `<div class="date ${activeClass}" data-date="${dateStr}">${i}</div>`;
