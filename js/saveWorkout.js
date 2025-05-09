@@ -1,3 +1,5 @@
+// Planner Page
+
 document.addEventListener("DOMContentLoaded", () => {
   const confirmButton = document.getElementById("confirmButton");
 
