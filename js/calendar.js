@@ -72,6 +72,7 @@ datesHTML += `<div class="${classes.join(' ')}" data-date="${dateStr}">${i}</div
             popup.classList.remove('hidden');
         });
     });
+    
     addExerciseBtn.addEventListener("click", () => {
         if (selectedDate){
             window.location.href = `planner.html?date=${selectedDate}`;

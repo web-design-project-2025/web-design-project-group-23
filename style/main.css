@@ -262,6 +262,7 @@ main {
   border: 0;
   text-decoration: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 #addExerciseBtn a {
   text-decoration: none;
@@ -284,9 +285,8 @@ main {
 }
 
 .date.planned{
-  border: 2px color(#63e87d);
+  background-color: #63e87d;
   border-radius: 50%;
-  padding: 5px;
 }
 
 .hidden {
