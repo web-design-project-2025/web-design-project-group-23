@@ -68,11 +68,30 @@ datesHTML += `<div class="${classes.join(' ')}" data-date="${dateStr}">${i}</div
     dateElements.forEach(dateEl => {
         dateEl.addEventListener('click', () => {
             selectedDate = dateEl.getAttribute('data-date');
+
+            const savedWorkouts = JSON.parse(localStorage.getItem("workoutData")) || {};
+            const hasWorkouts = savedWorkouts[selectedDate] && savedWorkouts[selectedDate].length > 0;
+
+            if (hasWorkouts){
+                window.location.href = `workout.html?date=${selectedDate}`;
+            } else {
+                const formatted = new Date(selectedDate).toLocaleDateString('sv-SE', {
+                    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+                });
+                popupText.textContent = `Workout Session: ${formatted}`;
+                popup.classList.remove('hidden');
+
+                const addExerciseBtn = document.getElementById("addExerciseBtn");
+                addExerciseBtn.onauxclick = () => {
+                    window.location.href = `planner.html?date=${selectedDate}`;
+                };
+            }
+
             popupText.textContent = `${selectedDate}`;
             popup.classList.remove('hidden');
         });
     });
-    
+
     addExerciseBtn.addEventListener("click", () => {
         if (selectedDate){
             window.location.href = `planner.html?date=${selectedDate}`;
