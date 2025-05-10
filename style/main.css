@@ -192,14 +192,14 @@ main {
 }
 
 .date {
-  display: flex;
+  display: inline-block;
   padding: 10px;
   margin: auto;
   cursor: pointer;
   font-weight: 600;
   border-radius: 10%;
   width: 40px;
-  height: 50px;
+  height: 40px;
   transition: 0.2s;
 }
 
@@ -245,6 +245,7 @@ main {
   color: white;
   width: 300px;
   position: relative;
+  
 }
 
 .popup-content p {
@@ -260,6 +261,7 @@ main {
   font-weight: bold;
   border: 0;
   text-decoration: none;
+  border-radius: 10px;
 }
 #addExerciseBtn a {
   text-decoration: none;
@@ -271,8 +273,7 @@ main {
   font-family: "Source Sans 3", sans-serif;
   color: #ff4800;
   font-weight: bold;
-  border: 0;
-}
+  border: 0;}
 
 .close {
   position: absolute;
@@ -280,6 +281,12 @@ main {
   right: 15px;
   font-size: 24px;
   cursor: pointer;
+}
+
+.date.planned{
+  border: 2px color(#63e87d);
+  border-radius: 50%;
+  padding: 5px;
 }
 
 .hidden {
