@@ -58,7 +58,7 @@ const updateCalendar = () => {
 
     dateElements.forEach(dateEl => {
         dateEl.addEventListener('click', () => {
-            const selectedDate = dateEl.getAttribute('data-date');
+        selectedDate = dateEl.getAttribute('data-date');
         popupText.textContent = `${selectedDate}`;
         popup.classList.remove('hidden');
     });
