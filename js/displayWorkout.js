@@ -1,3 +1,4 @@
+// Workout Page
 const displayWorkoutElements = document.querySelectorAll(".displayWorkout");
 const rawWorkoutData = localStorage.getItem("workoutData");
 

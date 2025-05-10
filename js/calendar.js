@@ -1,4 +1,4 @@
-// Calendar
+// Calendar Page
 // The following lines was adapted from: https://www.youtube.com/watch?v=OcncrLyddAs
 const monthYearElement = document.getElementById('monthYear');
 const datesElement = document.getElementById('dates');
@@ -51,13 +51,23 @@ const updateCalendar = () => {
     
     const dateElements = datesElement.querySelectorAll('.date:not(.inactive)');
 
+    // Pop up window
+
+    let selectedDate = null;
+    const addExerciseBtn = document.getElementById("addExerciseBtn");
+
     dateElements.forEach(dateEl => {
         dateEl.addEventListener('click', () => {
-            const selectedDate = dateEl.getAttribute('data-date'); 
-        popupText.textContent = `You clicked on: ${selectedDate}`;
+            const selectedDate = dateEl.getAttribute('data-date');
+        popupText.textContent = `${selectedDate}`;
         popup.classList.remove('hidden');
     });
-});
+    });
+    addExerciseBtn.addEventListener("click", () => {
+        if (selectedDate){
+            window.location.href = `planner.html?date=${selectedDate}`;
+        }
+    });
 }
 
 // Navigation buttons on the calendar for months

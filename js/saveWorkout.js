@@ -1,6 +1,14 @@
 // Planner Page
 
 document.addEventListener("DOMContentLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedDate = urlParams.get('date');
+  const dateDisplay = document.getElementById("selectedDate");
+
+  if (dateDisplay && selectedDate){
+    dateDisplay.textContent = `Workout: ${selectedDate}`;
+  }
+
   const confirmButton = document.getElementById("confirmButton");
 
   confirmButton.addEventListener("click", () => {
@@ -22,7 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       workout.push(JSON.stringify(workoutData));
+    
     }
+    
+    
     let wData = [];
     if (localStorage.getItem("workoutData") != null) {
       wData = JSON.parse(localStorage.getItem("workoutData"));
