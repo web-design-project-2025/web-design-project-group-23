@@ -1,4 +1,4 @@
-// Calendar
+// Calendar Page
 // The following lines was adapted from: https://www.youtube.com/watch?v=OcncrLyddAs
 const monthYearElement = document.getElementById('monthYear');
 const datesElement = document.getElementById('dates');
@@ -10,10 +10,14 @@ const popupText = document.getElementById('popupText');
 const closePopup = document.getElementById('closePopup');
 
 let currentDate = new Date();
+let selectedDate = null;
+
 
 const updateCalendar = () => {
     const currentYear = currentDate.getFullYear();
     const currentMonth = currentDate.getMonth();
+
+    const savedWorkouts = JSON.parse(localStorage.getItem("workoutData")) || {}; 
 
     const firstDay = new Date(currentYear, currentMonth, 1);
     const lastDay = new Date(currentYear, currentMonth + 1, 0);
@@ -34,12 +38,19 @@ const updateCalendar = () => {
     }
 
     // Current month dates
-    for (let i = 1; i <= totalDays; i++){
+    for (let i = 1; i <= totalDays; i++) {
         const date = new Date(currentYear, currentMonth, i);
         // The following line of code was asapted from: https://chatgpt.com/c/68189962-8d2c-800b-8538-afb057a0dfa7
-        const dateStr = date.toISOString().split('T')[0];
-        const activeClass = date.toDateString() === new Date().toDateString() ? 'active' : '';
-        datesHTML += `<div class="date ${activeClass}" data-date="${dateStr}">${i}</div>`;
+        const dateStr = date.toISOString().split('T')[0];  // Removes TIME from the ISO format.
+
+        const isToday = date.toDateString() === new Date().toDateString();
+        const isPlanned = savedWorkouts[dateStr] && savedWorkouts[dateStr].length > 0;
+
+        const classes = ['date'];
+        if (isToday) classes.push('active');
+        if (isPlanned) classes.push('planned');
+
+datesHTML += `<div class="${classes.join(' ')}" data-date="${dateStr}">${i}</div>`;
     }
 
     // Next month's dates
@@ -51,13 +62,41 @@ const updateCalendar = () => {
     
     const dateElements = datesElement.querySelectorAll('.date:not(.inactive)');
 
+    // Pop up window
+    const addExerciseBtn = document.getElementById("addExerciseBtn");
+
     dateElements.forEach(dateEl => {
         dateEl.addEventListener('click', () => {
-            const selectedDate = dateEl.getAttribute('data-date'); 
-        popupText.textContent = `You clicked on: ${selectedDate}`;
-        popup.classList.remove('hidden');
+            selectedDate = dateEl.getAttribute('data-date');
+
+            const savedWorkouts = JSON.parse(localStorage.getItem("workoutData")) || {};
+            const hasWorkouts = savedWorkouts[selectedDate] && savedWorkouts[selectedDate].length > 0;
+
+            if (hasWorkouts){
+                window.location.href = `workout.html?date=${selectedDate}`;
+            } else {
+                const formatted = new Date(selectedDate).toLocaleDateString('sv-SE', {
+                    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+                });
+                popupText.textContent = `Workout Session: ${formatted}`;
+                popup.classList.remove('hidden');
+
+                const addExerciseBtn = document.getElementById("addExerciseBtn");
+                addExerciseBtn.onauxclick = () => {
+                    window.location.href = `planner.html?date=${selectedDate}`;
+                };
+            }
+
+            popupText.textContent = `${selectedDate}`;
+            popup.classList.remove('hidden');
+        });
     });
-});
+
+    addExerciseBtn.addEventListener("click", () => {
+        if (selectedDate){
+            window.location.href = `planner.html?date=${selectedDate}`;
+        }
+    });
 }
 
 // Navigation buttons on the calendar for months
