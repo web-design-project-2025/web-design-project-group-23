@@ -286,17 +286,38 @@ main {
 
 .date.planned{
   background-color: #63e87d;
+  color: rgb(0, 0, 0);
   border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden {
   display: none;
 }
 
+
+
+/* Workout page text */
 .dw{
-color: #ffffff;
+  font-family: "Source Sans 3", sans-serif;
+  color: #ffffff;
 }
 
+.start-button{
+  background-color: #63e87d;
+  border-radius: 12px;
+  border: none;
+  font-family: "Source Sans 3", sans-serif;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: large;
+  padding: 15px;
+  cursor: pointer;
+}
 
 
 
