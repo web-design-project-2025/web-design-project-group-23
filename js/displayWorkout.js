@@ -35,7 +35,6 @@ if (rawWorkoutData) {
           <p class="dw">Duration: ${exercise.duration} min</p>
         `;
 
-
         const nextButton = document.createElement("button");
         nextButton.textContent = "Next Exercise";
         nextButton.classList.add("next-button");
