@@ -16,7 +16,7 @@
 
   <body>
     <header class="header">
-      <h1 class="headerlogo">Shape Tale</h1>
+      <img class="logo" src="images/logo.png" alt="Shape Tale Logo" />
       <div class="profileCircle">TEXT</div>
     </header>
     <nav>
@@ -36,27 +36,26 @@
       <table class="planner">
         <thead>
           <tr>
-          <th>Exercise</th>
-          <th>Sets</th>
-          <th>Reps</th>
-          <th>Weight (kg)</th>
-          <th>Duration (min)</th>
-       </tr> 
-      </thead>
+            <th>Exercise</th>
+            <th>Sets</th>
+            <th>Reps</th>
+            <th>Weight (kg)</th>
+            <th>Duration (min)</th>
+          </tr>
+        </thead>
 
         <!-- Input fields -->
         <tbody>
-        <td><select name="selection" class="exerciseList"></select></td>
-        <td><input class="sets" type="number" /></td>
-        <td><input class="reps" type="number" /></td>
-        <td><input class="weight" type="number" /></td>
-        <td><input class="duration" type="number" /></td>
+          <td><select name="selection" class="exerciseList"></select></td>
+          <td><input class="sets" type="number" /></td>
+          <td><input class="reps" type="number" /></td>
+          <td><input class="weight" type="number" /></td>
+          <td><input class="duration" type="number" /></td>
         </tbody>
 
-          <div>
+        <div>
           <button id="addButton">Add Exercise &plus;</button>
-          </div>  
-
+        </div>
       </table>
       <button id="confirmButton">Confirm &checkmark;</button>
     </main>

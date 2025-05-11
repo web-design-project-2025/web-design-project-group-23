@@ -43,6 +43,12 @@ header {
   justify-content: space-between;
 }
 
+.logo {
+  width: 350px;
+  height: auto;
+}
+
+
 .profileCircle {
   display: flex;
   width: 50px;
