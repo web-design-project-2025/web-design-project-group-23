@@ -155,6 +155,7 @@ main {
   text-align: center;
   font-weight: 600;
   width: 150px;
+  font-family: medium;
 }
 
 .calendarHeader button {
@@ -284,6 +285,7 @@ main {
   cursor: pointer;
 }
 
+
 .date.planned{
   background-color: #63e87d;
   color: rgb(0, 0, 0);
@@ -301,7 +303,36 @@ main {
 
 
 
-/* Workout page text */
+
+/* Planner Page */
+#selectedDate{
+  display: flex;
+  padding: 1%;
+  font-family: "Source Sans 3", sans-serif;
+  color: #ffffff;
+}
+
+#confirmButton{
+  background-color: #63e87d;
+  border-radius: 12px;
+  border: none;
+  font-family: "Source Sans 3", sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#addButton{
+  background-color: #63e87d;
+  border-radius: 12px;
+  border: none;
+  font-family: "Source Sans 3", sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+
+/* Workout Page */
 .dw{
   font-family: "Source Sans 3", sans-serif;
   color: #ffffff;
@@ -317,6 +348,34 @@ main {
   font-size: large;
   padding: 15px;
   cursor: pointer;
+  margin-top: 20%;
+}
+
+.remove-button{
+  display: block;
+  margin: 20px auto;
+  background-color: #192428;
+  border-radius: 12px;
+  border: none;
+  font-family: "Source Sans 3", sans-serif;
+  color: #ff4800;
+  text-align: center;
+  cursor: pointer;
+  padding: 10%;
+}
+
+.next-button{
+  background-color: #63e87d;
+  border-radius: 12px;
+  border: none;
+  font-family: "Source Sans 3", sans-serif;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: large;
+  padding: 15px;
+  cursor: pointer;
+  margin-top: 20%;
+  margin-bottom: 20%;
 }
 
 

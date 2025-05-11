@@ -34,24 +34,30 @@
     <main>
       <h2 id="selectedDate"></h2>
       <table class="planner">
-        <tr>
+        <thead>
+          <tr>
           <th>Exercise</th>
           <th>Sets</th>
           <th>Reps</th>
           <th>Weight (kg)</th>
           <th>Duration (min)</th>
-        </tr>
+       </tr> 
+      </thead>
 
         <!-- Input fields -->
-        <td>
-          <select name="selection" class="exerciseList"></select>
-        </td>
+        <tbody>
+        <td><select name="selection" class="exerciseList"></select></td>
         <td><input class="sets" type="number" /></td>
         <td><input class="reps" type="number" /></td>
         <td><input class="weight" type="number" /></td>
         <td><input class="duration" type="number" /></td>
+        </tbody>
+
+          <div>
+          <button id="addButton">Add Exercise &plus;</button>
+          </div>  
+
       </table>
-      <button id="addButton">Add Exercise &plus;</button>
       <button id="confirmButton">Confirm &checkmark;</button>
     </main>
 

@@ -62,7 +62,7 @@ if (rawWorkoutData && selectedDate) {
           if (exerciseIndex < session.length) {
             showExercise(); 
           } else {
-              container.innerHTML = `<p class="dw">Workout completed!</p>`;
+              container.innerHTML = `<p class="dw">Workout completed!✅</p>`;
           }
         });
             container.appendChild(exerciseDiv);
