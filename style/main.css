@@ -376,7 +376,8 @@ main {
   cursor: pointer;
   margin-top: 20%;
   margin-bottom: 20%;
-=======
+}
+
 .dw {
   color: #ffffff;
 }
@@ -385,8 +386,6 @@ main {
 
 /* News Page */
 .contentLayout{
-=======
-.contentLayout {
   display: flex;
   justify-content: center;
   align-items: flex-start;
