@@ -14,7 +14,7 @@
     <script src="/js/init.js"></script>
   </head>
 
-  <body>
+  <body class="loginPage">
     <header class="header">
       <a href="index.html">
         <img class="loginLogo" src="images/logo.png" alt="Shape Tale Logo"
@@ -23,18 +23,24 @@
 
     <main>
       <div class="loginContainer">
-        <form>
+        <form id="loginForm">
           <div class="inputBox">
             <h3>Welcome Back!</h3>
-            <input type="text" class="accountInput" placeholder="Username" />
-            <input type="text" cass="accountInput" placeholder="Password" />
+            <input
+              type="text"
+              class="accountInput"
+              id="username"
+              placeholder="Username"
+            />
+            <input type="password" cass="accountInput" placeholder="Password" />
             <a href="">Forgot password?</a>
           </div>
 
-          <button class="button-style">login</button>
+          <button class="button-style">Login</button>
         </form>
       </div>
     </main>
     <script src="/js/loadHandler.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>
