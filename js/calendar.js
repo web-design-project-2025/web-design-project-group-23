@@ -17,7 +17,8 @@ const updateCalendar = () => {
     const currentYear = currentDate.getFullYear();
     const currentMonth = currentDate.getMonth();
 
-    const savedWorkouts = JSON.parse(localStorage.getItem("workoutData")) || {}; 
+    const savedWorkouts = JSON.parse(localStorage.getItem("workoutData")) || {};
+    console.log(localStorage.getItem("workoutData"));
 
     const firstDay = new Date(currentYear, currentMonth, 1);
     const lastDay = new Date(currentYear, currentMonth + 1, 0);
@@ -82,13 +83,11 @@ datesHTML += `<div class="${classes.join(' ')}" data-date="${dateStr}">${i}</div
                 popup.classList.remove('hidden');
 
                 const addExerciseBtn = document.getElementById("addExerciseBtn");
-                addExerciseBtn.onauxclick = () => {
+                addExerciseBtn.onclick = () => {
                     window.location.href = `planner.html?date=${selectedDate}`;
                 };
             }
 
-            popupText.textContent = `${selectedDate}`;
-            popup.classList.remove('hidden');
         });
     });
 
