@@ -10,7 +10,6 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
-
     />
     <script src="/js/init.js"></script>
   </head>
@@ -18,13 +17,15 @@
   <body>
     <header class="header">
       <a href="index.html">
-        <img class="logo" src="images/logo.png" alt="Shape Tale Logo"/></a>
+        <img class="logo" src="images/logo.png" alt="Shape Tale Logo"
+      /></a>
       <div class="profileCircle">
-        <img id="profileAvatar" src="avatars/lvl1.png" alt="Profile Avatar"/></div>
-      </header>
+        <img id="profileAvatar" src="avatars/lvl1.png" alt="Profile Avatar" />
+      </div>
+    </header>
 
     <nav>
-      <p>Profile</p>
+      <p>Home Page</p>
       <div class="icons">
         <a href="workout.html"><img src="/icons/workout.png" alt="" /></a>
         <a href="calendar.html"><img src="/icons/schedule.png" alt="" /></a>
@@ -33,45 +34,20 @@
         <a href=""><img src="/icons/settings.png" alt="" /></a>
       </div>
     </nav>
+
     <main>
+      <div class="loginContainer">
+        <form>
+          <div class="inputBox">
+            <h3>Welcome Back!</h3>
+            <input type="text" class="accountInput" placeholder="Username" />
+            <input type="text" cass="accountInput" placeholder="Password" />
+            <a href="">Forgot password?</a>
+          </div>
 
-      <div class="circle" id="mainCircle"></div>
-
-      <!-----Email-->
-      <section class="email-section">
-        <h2>Email Adress</h2>
-        <p id="current-email">Erik.svensson@exempel.com</p>
-        <button id="edit-email-btn" class="button-style" >Edit Email</button>
-        <div id="email-edit" style="display: none; margin-top: 1rem">
-          <input type="email" id="new-email" placeholder="Enter a new email" />
-          <button id="save-email-btn" class="button-style">Save</button>
-        </div>
-      </section>
-
-      <!---Weight and height-->
-       <section class="stats-section">
-        <h2>Stats</h2>
-
-        <div class="stats-values">
-            <div class="stat">
-                <label for="height">Height (cm)</label>
-                <input type="text" id="height" placeholder="e.g. 170"/>
-            </div>
-
-            <div class="stat">
-                <label for="weight">Weight (kg)</label>
-                <input type="text" id="weight" placeholder="e.g 75" />
-            </div>
-        </div>
-        <p id="bmi-result" style="margin-top: 1rem;"></p>
-        <button id="save-stats-btn" class="button-style">Save Stats</button>
-
-                </label>
-
-            </div>
-
-        </div>
-
+          <button class="button-style">login</button>
+        </form>
+      </div>
     </main>
 
     <footer>
@@ -94,13 +70,9 @@
           <a href=""><li>Our Mission</li></a>
           <a href=""><li>Our Partners</li></a>
           <a href=""><li>Data Collection</li></a>
-
         </ul>
       </div>
     </footer>
-    <script src="/js/bmi.js"></script>
     <script src="/js/loadHandler.js"></script>
-    <script defen src="app"></script>
-   
   </body>
 </html>

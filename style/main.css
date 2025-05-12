@@ -582,3 +582,16 @@ body {
   font-family: "Source Sans 3", sans-serif;
   font-size: 1rem;
 }
+
+/*LOGIN PAGE*/
+
+.loginContainer {
+  background-color: #ff4800;
+  width: 420px;
+}
+
+.accountInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
