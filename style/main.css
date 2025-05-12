@@ -586,12 +586,27 @@ body {
 /*LOGIN PAGE*/
 
 .loginContainer {
-  background-color: #ff4800;
+  background-color: #1d2d33;
+  color: #ff4800
   width: 420px;
+}
+
+.loginLogo {
+  display: flex:
+  justify-content: center;
+  align-items: center;
+}
+
+.loginLogo img {
+  display: flex;
+ justify-content: center;
 }
 
 .accountInput {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
+ 
+  
 }
