@@ -1,3 +1,5 @@
+/* Demo user*/
+
 const users = [{ username: "erik.svensson", password: "erika" }];
 
 document.addEventListener("DOMContentLoaded", () => {
