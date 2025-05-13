@@ -9,28 +9,28 @@ if (rawWorkoutData && selectedDate) {
   const workoutsData = JSON.parse(rawWorkoutData);
   const session = workoutsData[selectedDate];
 
-  if (session && session.length > 0){
+  if (session && session.length > 0) {
     displayWorkoutElements.forEach((container) => {
-    const startButton = document.createElement("button");
-    startButton.textContent = "Start Workout";
-    startButton.classList.add("start-button");
-    container.appendChild(startButton);
+      const startButton = document.createElement("button");
+      startButton.textContent = "Start Workout";
+      startButton.classList.add("start-button");
+      container.appendChild(startButton);
 
-    const removeButton = document.createElement("button");
-    removeButton.textContent = "Remove Workout";
-    removeButton.classList.add("remove-button");
-    container.appendChild(removeButton);
+      const removeButton = document.createElement("button");
+      removeButton.textContent = "Remove Workout";
+      removeButton.classList.add("remove-button");
+      container.appendChild(removeButton);
 
-    removeButton.addEventListener("click", () => {
-      if (confirm("Are you sure you want to remove your workout?")){
-        const rawData = localStorage.getItem("workoutData");
-        const allData = JSON.parse(rawData);
-        delete allData[selectedDate];
-        localStorage.setItem("workoutData", JSON.stringify(allData));
+      removeButton.addEventListener("click", () => {
+        if (confirm("Are you sure you want to remove your workout?")) {
+          const rawData = localStorage.getItem("workoutData");
+          const allData = JSON.parse(rawData);
+          delete allData[selectedDate];
+          localStorage.setItem("workoutData", JSON.stringify(allData));
 
-        window.location.href = "calendar.html";
-      }
-    });
+          window.location.href = "calendar.html";
+        }
+      });
 
       startButton.addEventListener("click", () => {
         let exerciseIndex = 0;
@@ -51,34 +51,41 @@ if (rawWorkoutData && selectedDate) {
           <p class="dw">Duration: ${exercise.duration} min</p>
         `;
 
-        
-        const nextButton = document.createElement("button");
-        nextButton.textContent = "Next Exercise";
-        nextButton.classList.add("next-button");
-        
-        
-        nextButton.addEventListener("click", () => {
-          exerciseIndex++; 
-          if (exerciseIndex < session.length) {
-            showExercise(); 
-          } else {
+          const nextButton = document.createElement("button");
+          nextButton.textContent = "Next Exercise";
+          nextButton.classList.add("next-button");
+
+          nextButton.addEventListener("click", () => {
+            exerciseIndex++;
+            if (exerciseIndex < session.length) {
+              showExercise();
+            } else {
               container.innerHTML = `<p class="dw">Workout completed!✅</p>`;
-          }
-        });
-            container.appendChild(exerciseDiv);
-            container.appendChild(nextButton);
+
+              const profile = JSON.parse(localStorage.getItem("userProfile"));
+              if (profile) {
+                profile.xp += 50;
+                if (profile.xp >= 100) {
+                  profile.xp = 0;
+                }
+                localStorage.setItem("userProfile", JSON.stringify(profile));
+              }
+            }
+          });
+          container.appendChild(exerciseDiv);
+          container.appendChild(nextButton);
         };
-          showExercise();
+        showExercise();
       });
     });
   } else {
     // If ther is no workout session for the selected date
-  displayWorkoutElements.forEach((container) => {
-    container.innerHTML = "<p class='dw'>No workouts saved this date.</p>";
-  });
-}
-  } else {
-    // If there is no data from LocalStorage on the selected date
+    displayWorkoutElements.forEach((container) => {
+      container.innerHTML = "<p class='dw'>No workouts saved this date.</p>";
+    });
+  }
+} else {
+  // If there is no data from LocalStorage on the selected date
   displayWorkoutElements.forEach((container) => {
     container.innerHTML = "<p class='dw'>No workout data found.</p>";
   });
