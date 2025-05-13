@@ -639,3 +639,22 @@ body {
   justify-content: center;
   
 }
+
+/*Cirkular progress bar*/
+
+ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans 3", sans-serif;
+
+}
+
+.progress
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
