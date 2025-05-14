@@ -457,7 +457,6 @@ body {
   font-size: 6rem;
 }
 
-
 .dw {
   color: #ffffff;
 }
@@ -544,7 +543,7 @@ body {
 .login-page::before {
   content: "";
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   height: 100%;
   width: 100%;
@@ -556,12 +555,11 @@ body {
 
 .loginContainer {
   background-color: #1d2d33;
-  color: #ff4800
+  color: #ff4800;
   width: 420px;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-
 }
 
 .loginLogo {
@@ -575,109 +573,146 @@ body {
 
 .loginLogo img {
   display: flex;
- justify-content: center;
+  justify-content: center;
 }
 
 .accountInput {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
 
-  .dw {
-    color: #ffffff;
-  }
+.dw {
+  color: #ffffff;
+}
 
-  /* News Page */
-  .contentLayout {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 1100px;
-    margin: 2rem auto;
-    padding: 2rem;
-    font-family: "Source Sans 3", sans-serif;
-    line-height: 1.7;
-    font-size: 1.1rem;
-    color: #ffff;
-    background-color: #1d2d33;
-    border-radius: 8px;
-  }
+/* News Page */
+.contentLayout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: #ffff;
+  background-color: #1d2d33;
+  border-radius: 8px;
+}
 
-  .article {
-    max-width: 1000px;
-    flex: 1;
-    text-align: justify;
-    line-height: 1.6;
-  }
-  .article img {
-    max-width: 100%;
-  }
+.article {
+  max-width: 1000px;
+  flex: 1;
+  text-align: justify;
+  line-height: 1.6;
+}
+.article img {
+  max-width: 100%;
+}
 
-  .newsh1 {
-    font-family: medium;
-    color: #ff4800;
-  }
-  .newsh2 {
-    margin-top: 1rem;
-    margin-bottom: 0rem;
-    font-size: xx-large;
-    color: #ff4800;
-  }
-  .newsh3 {
-    margin-top: 1rem;
-    margin-bottom: 0rem;
-    font-size: x-large;
-    color: #ff4800;
-  }
+.newsh1 {
+  font-family: medium;
+  color: #ff4800;
+}
+.newsh2 {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  font-size: xx-large;
+  color: #ff4800;
+}
+.newsh3 {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  font-size: x-large;
+  color: #ff4800;
+}
 
-  .articleText {
-    margin-top: 0%;
-    margin-bottom: 2rem;
-  }
+.articleText {
+  margin-top: 0%;
+  margin-bottom: 2rem;
+}
 
-  body {
-    overflow-y: scroll;
-    background-color: #192428;
-  }
+body {
+  overflow-y: scroll;
+  background-color: #192428;
+}
 
-  /* Bmi  calculator*/
+/* Bmi  calculator*/
 
-  .stats-section {
-    margin: 2rem auto;
-    padding: 1rem;
-    max-width: 500px;
-    text-align: center;
-    color: white;
-    font-family: "Source Sans 3", sans-serif;
-  }
+.stats-section {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 500px;
+  text-align: center;
+  color: white;
+  font-family: "Source Sans 3", sans-serif;
+}
 
-  .stats-section h2 {
-    margin-bottom: 1rem;
-  }
+.stats-section h2 {
+  margin-bottom: 1rem;
+}
 
-  .stats-values {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
+.stats-values {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
 
-  .stat {
-    display: flex;
-    flex-direction: column;
-  }
+.stat {
+  display: flex;
+  flex-direction: column;
+}
 
-  .stat label {
-    margin-bottom: 0.3rem;
-    font-size: 1rem;
-  }
+.stat label {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
 
-  .stat input {
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #1d2d33;
-    font-size: 1rem;
-    width: 120px;
-  }
+.stat input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #1d2d33;
+  font-size: 1rem;
+  width: 120px;
+}
+
+/*XP BAR - LEVEL*/
+#xp-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 30px auto;
+  font-family: medium;
+  color: #0ff;
+  text-align: center;
+}
+
+#xp-bar-wrapper {
+  background-color: rgba(0, 255, 255, 0.1);
+  border-radius: 50px;
+  overflow: hidden;
+  height: 30px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+#xp-bar {
+  height: 100%;
+  width: 0;
+  background: #46cc0c;
+  border-radius: 50px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 15px #e1cd14, 0 0 #4d790f, 0 0 #9bfc00;
+  transition: width 0.4s ease;
+}
+
+#xp-text {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  font-weight: bold;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px 0ff;
+}
