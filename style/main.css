@@ -147,13 +147,14 @@ nav a {
 
 /* Calendar Page */
 main {
-  min-height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .calendar {
+  width: 40%;
+  max-width: 100%;
   margin: 2%;
   display: flex;
   height: auto;
@@ -162,6 +163,7 @@ main {
   border-radius: 10px;
   font-family: "Source Sans 3", sans-serif;
   color: white;
+  overflow: hidden;
 }
 
 .calendarHeader {
@@ -176,6 +178,7 @@ main {
   font-weight: 600;
   width: 150px;
   font-family: medium;
+
 }
 
 .calendarHeader button {
@@ -193,23 +196,30 @@ main {
   font-size: xx-large;
 }
 
-.days {
+.calendarGrid{
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-}
-.day {
-  text-align: center;
-  padding: 5px;
-  color: white;
-  font-weight: 500;
 }
 
-.dates {
+.days, 
+.dates{
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
-  font-family: "Source Sans 3", sans-serif;
+  font-weight: bold;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+
+.day {
+  display: flex;
+  text-align: center;
+  padding: 10px;
+  font-family: medium;
   color: white;
+  font-weight: bold;
+  font-size: small;
 }
 
 .date {
@@ -320,6 +330,8 @@ main {
   display: none;
 }
 
+
+
 /* Planner Page */
 #selectedDate {
   display: flex;
@@ -329,22 +341,28 @@ main {
 }
 
 #confirmButton {
+  display: block;
   background-color: #63e87d;
-  border-radius: 12px;
+  border-radius: 8px;
   border: none;
   font-family: "Source Sans 3", sans-serif;
   color: #ffffff;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 #addButton {
+  display: block;
   background-color: #63e87d;
   border-radius: 12px;
   border: none;
   font-family: "Source Sans 3", sans-serif;
   color: #ffffff;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
+
+
 
 /* Workout Page */
 .dw {
@@ -354,7 +372,7 @@ main {
 
 .start-button {
   background-color: #63e87d;
-  border-radius: 12px;
+  border-radius: 8px;
   border: none;
   font-family: "Source Sans 3", sans-serif;
   color: #ffffff;
@@ -634,7 +652,7 @@ body {
   
 }
 
-/*Cirkular progress bar*/
+/*Circular progress bar*/
 .progress
 {
   display: flex;
@@ -746,6 +764,14 @@ main > div {
   align-items: center;
 }
 
+html, body{
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+
+
+
   /* Responsiveness */
 /* Home Page */
 @media (max-width: 1000px){
@@ -778,8 +804,13 @@ main > div {
   /* Calendar Page */
   .calendar{
     width: 80%;
-    padding: 1rem;
+    padding: 0.5rem;
     overflow-x: auto;
+  }
+
+  .calendarGrid{
+    width: 100%;
+    height: 100%;
   }
   .calendarHeader{
     flex-direction: row;
@@ -814,15 +845,34 @@ main > div {
     width: 30%;
     padding: 8px;
   }
+  
+  @media (max-width: 550px) {
+    .calendar{
+      width: 100%;
+      padding: 1rem;
+      border-radius: border-box;
+      overflow-x: hidden;
+    }
+    .calendarHeader{
+      gap: 0.05rem;
+      justify-content: space-between;
+    }
+  }
+
 
 
 /* Planner Page */
  .planner{
-  display: block;
+  display: table;
   width: 100%;
   overflow-x: auto;
   margin-bottom: 1rem;
-  
+  margin-top: 0;
+  padding: 5%;
+ }
+
+ main{
+  display: block;
  }
 
  .planner thead{
@@ -830,17 +880,17 @@ main > div {
  }
 
  .planner tbody tr{
-  display: flex;
+  display: table-row;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 2rem;
   justify-content: space-between;
   margin-bottom: 2rem;
  }
 
  .planner td{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0.3rem;
  }
  .planner td::before{
   content: attr(data-label);
@@ -862,21 +912,27 @@ main > div {
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+  gap: 1rem;
+  justify-content: space-between;
  }
 
  #addButton{
   display: block;
+  margin-left: 5%;
  }
 
  #confirmButton{
   display: block;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-left: 5%;
  }
 
  #selectedDate{
-  font-size: small;
+  font-size: large;
   text-align: center;
+  justify-content: flex-start;
+  padding: 3%;
+  gap: 0;
+  margin-bottom: 0;
  }
 
 

@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (dateDisplay && selectedDate) {
     dateDisplay.textContent = `Workout: ${selectedDate}`;
   }
+  });
+
 
   const confirmButton = document.getElementById("confirmButton");
   confirmButton.addEventListener("click", () => {
@@ -46,4 +48,3 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("Workout Saved!");
     window.location.href = "calendar.html";
   });
-});

@@ -33,8 +33,17 @@
         <a href=""><img src="/icons/settings.png" alt="" /></a>
       </div>
     </nav>
-    <main>
-      <h2 id="selectedDate"></h2>
+
+    <h2 id="selectedDate"></h2>
+     <tr>
+          <td>
+            <div class="buttonWraper">
+              <button id="addButton">Add Exercise &plus;</button>
+              <button id="confirmButton">Confirm &checkmark;</button>
+            </div>
+          </td>
+        </tr>
+    <main>    
       <table class="planner">
         <thead>
           <tr>
@@ -56,16 +65,8 @@
           <td data-label="Duration"><input class="duration" type="number" /></td>
         </tr>
 
-        <tr>
-          <td>
-          <div class="buttonWraper">
-          <button id="addButton">Add Exercise &plus;</button>
-          <button id="confirmButton">Confirm &checkmark;</button>
-        </div>
-        </td>
-      </tr>
-      
         </tbody>
+    
     </table>
         
     </main>
