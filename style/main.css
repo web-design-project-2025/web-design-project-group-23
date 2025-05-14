@@ -7,10 +7,11 @@ body {
 }
 
 footer {
+
   background-color: #ff4800;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: baseline;
   gap: 3rem;
   padding: 2rem;
   color: white;
@@ -741,7 +742,12 @@ body {
     width: 120px;
   }
 
-
+main > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
   /* Responsiveness */
 /* Home Page */
@@ -811,6 +817,71 @@ body {
     width: 30%;
     padding: 8px;
   }
+
+
+/* Planner Page */
+ .planner{
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  
+ }
+
+ .planner thead{
+  display: none;
+ }
+
+ .planner tbody tr{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+ }
+
+ .planner td{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+ }
+ .planner td::before{
+  content: attr(data-label);
+  font-weight: bold;
+ }
+
+ .planner input, 
+ .planner select{
+  width: 100%;
+  font-size: smaller;
+ }
+
+ .planner-row-buttons button{
+  width: 100%;
+ }
+
+ .buttonWraper{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+ }
+
+ #addButton{
+  display: block;
+ }
+
+ #confirmButton{
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+ }
+
+ #selectedDate{
+  font-size: small;
+  text-align: center;
+ }
+
 
 
 
