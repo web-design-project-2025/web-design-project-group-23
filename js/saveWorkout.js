@@ -48,3 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("Workout Saved!");
     window.location.href = "calendar.html";
   });
+=======
+  });
+});
