@@ -425,6 +425,21 @@ main {
   color: #ffffff;
 }
 
+.goCalendar{
+  background-color: #63e87d;
+  border-radius: 8px;
+  border: none;
+  font-family: "Source Sans 3", sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 3%;
+}
+
+
+
+
+
 /* News Page */
 .contentLayout {
   display: flex;

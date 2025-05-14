@@ -82,12 +82,20 @@ if (rawWorkoutData && selectedDate) {
   } else {
     // If ther is no workout session for the selected date
     displayWorkoutElements.forEach((container) => {
-      container.innerHTML = "<p class='dw'>No workouts saved this date.</p>";
+      container.innerHTML = `
+      <p class='dw'>No workouts saved this date.</p>`;
     });
   }
 } else {
   // If there is no data from LocalStorage on the selected date
   displayWorkoutElements.forEach((container) => {
-    container.innerHTML = "<p class='dw'>No workout data found.</p>";
+    container.innerHTML = `
+    <p class='dw'>No workout data found.</p>
+    <button class='goCalendar'>Go to the Calendar</button>`;
+
+    const goButton = container.querySelector(".goCalendar");
+    goButton.addEventListener("click", () =>{
+      window.location.href = "calendar.html";
+    });
   });
 }
