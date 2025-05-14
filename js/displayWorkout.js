@@ -4,6 +4,7 @@ const rawWorkoutData = localStorage.getItem("workoutData");
 
 const urlParams = new URLSearchParams(window.location.search);
 const selectedDate = urlParams.get("date");
+console.log("Date recieved in planner:", selectedDate);
 
 if (rawWorkoutData && selectedDate) {
   const workoutsData = JSON.parse(rawWorkoutData);
