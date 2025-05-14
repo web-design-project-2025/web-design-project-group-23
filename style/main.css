@@ -7,7 +7,6 @@ body {
 }
 
 footer {
-
   background-color: #ff4800;
   display: flex;
   flex-direction: row;
@@ -84,7 +83,7 @@ header {
   padding: 0%;
 }
 .icons img {
-  width: 25px;
+  width: 30px;
 }
 
 nav p {
@@ -112,6 +111,18 @@ nav a {
   display: flex;
   flex-direction: row;
   gap: 1em;
+}
+
+.workoutImage{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 20px;
+}
+.workoutImage img{
+  max-width: 50%;
+  width: auto;
+  height: auto;
 }
 
 
