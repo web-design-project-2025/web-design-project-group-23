@@ -156,10 +156,8 @@ main {
 .calendar {
   margin: 2%;
   display: flex;
-  width: 50%;
   height: auto;
   flex-direction: column;
-  padding: 10px;
   background: #1d2d33;
   border-radius: 10px;
   font-family: "Source Sans 3", sans-serif;
@@ -540,7 +538,6 @@ body {
 }
 
 /* Bmi  calculator*/
-
 .stats-section {
   margin: 2rem auto;
   padding: 1rem;
