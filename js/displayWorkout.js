@@ -68,7 +68,9 @@ if (rawWorkoutData && selectedDate) {
                 profile.xp += 50;
                 if (profile.xp >= 100) {
                   profile.xp = 0;
+                  profile.level++;
                 }
+
                 localStorage.setItem("userProfile", JSON.stringify(profile));
               }
             }
