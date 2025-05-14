@@ -165,6 +165,7 @@ main {
 
 .calendar {
   width: 40%;
+  height: auto;
   max-width: 100%;
   margin: 2%;
   display: flex;
@@ -175,6 +176,7 @@ main {
   font-family: "Source Sans 3", sans-serif;
   color: white;
   overflow: hidden;
+  padding: 1rem;
 }
 
 .calendarHeader {
@@ -255,10 +257,13 @@ main {
   color: #ff4800;
 }
 .date.inactive {
+  background-color: #192428;
   color: white;
+  padding: 10px;
 }
 .date.inactive:hover {
   color: white;
+  background-color: #192428;
 }
 
 /* Popup styling */
