@@ -139,23 +139,6 @@ nav a {
   display: flex;
 }
 
-/* Profile Page */
-.circle {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-color: #ff4800;
-  margin: 1em;
-  display: flex;
-  /* Text */
-  color: white;
-  align-items: center;
-  justify-content: center;
-  font-family: "Source Sans 3", sans-serif;
-  font-weight: bold;
-  font-size: xx-large;
-}
-
 /* Calendar Page */
 main {
   display: flex;
@@ -527,8 +510,9 @@ body {
 
 .stat label {
   margin-bottom: 0.3rem;
-  font-size: 1rem;
+  font-size: 6rem;
 }
+
 .dw {
   color: #ffffff;
 }
@@ -653,7 +637,7 @@ body {
 .login-page::before {
   content: "";
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   height: 100%;
   width: 100%;
@@ -662,6 +646,16 @@ body {
   z-index: -1;
   filter: brightness(0.5);
 }
+
+.loginContainer {
+  background-color: #1d2d33;
+  color: #ff4800;
+  width: 420px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
 .loginLogo {
   display: flex;
   margin: 2rem auto;
@@ -673,24 +667,102 @@ body {
 
 .loginLogo img {
   display: flex;
- justify-content: center;
+  justify-content: center;
 }
 
 .accountInput {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
 
+.dw {
+  color: #ffffff;
+}
+
+/* News Page */
+.contentLayout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: #ffff;
+  background-color: #1d2d33;
+  border-radius: 8px;
+}
+
+.article {
+  max-width: 1000px;
+  flex: 1;
+  text-align: justify;
+  line-height: 1.6;
+}
+.article img {
+  max-width: 100%;
+}
+
+.newsh1 {
+  font-family: medium;
+  color: #ff4800;
+}
+.newsh2 {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  font-size: xx-large;
+  color: #ff4800;
+}
+.newsh3 {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  font-size: x-large;
+  color: #ff4800;
+}
+
+.articleText {
+  margin-top: 0%;
+  margin-bottom: 2rem;
+}
+
+body {
+  overflow-y: scroll;
+  background-color: #192428;
+}
+
+/* Bmi  calculator*/
+
+.stats-section {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 500px;
+  text-align: center;
+  color: white;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.stats-section h2 {
+  margin-bottom: 1rem;
+}
+
+.stats-values {
 /*Circular progress bar*/
 .progress
 {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+=======
   .dw {
     color: #ffffff;
   }
@@ -711,75 +783,79 @@ body {
     border-radius: 8px;
   }
 
-  .article {
-    max-width: 1000px;
-    flex: 1;
-    text-align: justify;
-    line-height: 1.6;
-  }
-  .article img {
-    max-width: 100%;
-  }
+.stat label {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
 
-  .newsh1 {
-    font-family: medium;
-    color: #ff4800;
-  }
-  .newsh2 {
-    margin-top: 1rem;
-    margin-bottom: 0rem;
-    font-size: xx-large;
-    color: #ff4800;
-  }
-  .newsh3 {
-    margin-top: 1rem;
-    margin-bottom: 0rem;
-    font-size: x-large;
-    color: #ff4800;
-  }
+.stat input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #1d2d33;
+  font-size: 1rem;
+  width: 120px;
+}
 
-  .articleText {
-    margin-top: 0%;
-    margin-bottom: 2rem;
+/*XP BAR - LEVEL*/
+#xp-container {
+  width: 100%;
+  max-width: 95%;
+  margin: 30px auto;
+  font-family: medium;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+#xp-bar-wrapper {
+  background-color: rgba(0, 255, 38, 0.1);
+  border-radius: 50px;
+  overflow: hidden;
+  height: 30px;
+  box-shadow: 0 0 20px rgba(14, 213, 47, 0.9);
+  animation: glow 5s infinite alternate;
+}
+
+#xp-bar {
+  height: 100%;
+  width: 0;
+  background: #63e87d;
+  border-radius: 50px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 15px #0fad39, 0 0 #63e87d, 0 0 #0dc632;
+  transition: width 0.4s ease;
+}
+
+#xp-text {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 5px rgb(174, 14, 198), 0 0 10px 0ff;
+}
+
+.levelDisplay {
+  padding-bottom: 1.25%;
+
+  display: block;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 40px #63e87d, 0 0 #63e87d, 0 0 #63e87d;
   }
-
-  body {
-    overflow-y: scroll;
-    background-color: #192428;
+  to {
+    box-shadow: 0 0 15px #2fdc08, 0 0 #63e87d, 0 0 #63e87d;
   }
+}
 
-  /* Bmi  calculator*/
-
-  .stats-section {
-    margin: 2rem auto;
-    padding: 1rem;
-    max-width: 500px;
-    text-align: center;
-    color: white;
-    font-family: "Source Sans 3", sans-serif;
-  }
-
-  .stats-section h2 {
-    margin-bottom: 1rem;
-  }
-
-  .stats-values {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .stat {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .stat label {
-    margin-bottom: 0.3rem;
-    font-size: 1rem;
-  }
-
+/*USERNAME DISPLAY*/
+#usernameDisplay {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: lighter;
+  color: #ffffff;
+  font-size: 16p;
+  position: absolute;
+  right: 10%;
+}
+=======
   .stat input {
     padding: 0.5rem;
     border-radius: 5px;
