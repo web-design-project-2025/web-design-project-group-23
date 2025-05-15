@@ -682,37 +682,49 @@ body {
 /*XP BAR - LEVEL*/
 #xp-container {
   width: 100%;
-  max-width: 500px;
+  max-width: 95%;
   margin: 30px auto;
   font-family: medium;
-  color: #0ff;
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 
 #xp-bar-wrapper {
-  background-color: rgba(0, 255, 255, 0.1);
+  background-color: rgba(0, 255, 38, 0.1);
   border-radius: 50px;
   overflow: hidden;
   height: 30px;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(14, 213, 47, 0.9);
+  animation: glow 2s infinite alternate;
 }
 
 #xp-bar {
   height: 100%;
   width: 0;
-  background: #46cc0c;
+  background: #63e87d;
   border-radius: 50px;
   text-align: center;
   position: relative;
-  box-shadow: 0 0 15px #e1cd14, 0 0 #4d790f, 0 0 #9bfc00;
+  box-shadow: 0 0 15px #0fad39, 0 0 #63e87d, 0 0 #0dc632;
   transition: width 0.4s ease;
 }
 
 #xp-text {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%);
-  font-weight: bold;
-  color: #0ff;
-  text-shadow: 0 0 5px #0ff, 0 0 10px 0ff;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 5px rgb(174, 14, 198), 0 0 10px 0ff;
+}
+
+.levelDisplay {
+  padding-bottom: 1.25%;
+
+  display: block;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 15px #63e87d, 0 0 #63e87d, 0 0 #63e87d;
+  }
+  to {
+    box-shadow: 0 0 20px #2fdc08, 0 0 #63e87d, 0 0 #63e87d;
+  }
 }
