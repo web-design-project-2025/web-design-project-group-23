@@ -33,8 +33,17 @@
         <a href=""><img src="/icons/settings.png" alt="" /></a>
       </div>
     </nav>
-    <main>
-      <h2 id="selectedDate"></h2>
+
+    <h2 id="selectedDate"></h2>
+     <tr>
+          <td>
+            <div class="buttonWraper">
+              <button id="addButton">Add Exercise &plus;</button>
+              <button id="confirmButton">Confirm &checkmark;</button>
+            </div>
+          </td>
+        </tr>
+    <main>    
       <table class="planner">
         <thead>
           <tr>
@@ -48,20 +57,17 @@
 
         <!-- Input fields -->
         <tbody>
-          <tr>
-            <td><select name="selection" class="exerciseList"></select></td>
-            <td><input class="sets" type="number" /></td>
-            <td><input class="reps" type="number" /></td>
-            <td><input class="weight" type="number" /></td>
-            <td><input class="duration" type="number" /></td>
-          </tr>
+        <tr>
+          <td data-label="Exercise"><select name="selection" class="exerciseList"></select></td>
+          <td data-label="Sets"><input class="sets" type="number" /></td>
+          <td data-label="Reps"><input class="reps" type="number" /></td>
+          <td data-label="Weight"><input class="weight" type="number" /></td>
+          <td data-label="Duration"><input class="duration" type="number" /></td>
+        </tr>
+
         </tbody>
       </table>
 
-      <div>
-        <button id="addButton">Add Exercise &plus;</button>
-        <button id="confirmButton">Confirm &checkmark;</button>
-      </div>
     </main>
     <div id="xp-container">
       <label class="levelDisplay">Level <span id="xp-text"></span></label>
@@ -70,11 +76,11 @@
       </div>
     </div>
     <footer>
-      <div id="footer-column">
+      <div class="footer-column">
         <p>© 2025 ShapeTale AB</p>
       </div>
 
-      <div id="footer-column">
+      <div class="footer-column">
         <h3>Contact</h3>
         <ul>
           <a href=""><li>Customer Service</li></a>
@@ -83,7 +89,7 @@
         </ul>
       </div>
 
-      <div id="footer-column">
+      <div class="footer-column">
         <h3>About Us</h3>
         <ul>
           <a href=""><li>Our Mission</li></a>

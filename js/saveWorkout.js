@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (dateDisplay && selectedDate) {
     dateDisplay.textContent = `Workout: ${selectedDate}`;
-  }
-
+  }  
+  
   const confirmButton = document.getElementById("confirmButton");
   confirmButton.addEventListener("click", () => {
     const rows = document.querySelectorAll("tbody tr");
