@@ -728,3 +728,13 @@ body {
     box-shadow: 0 0 15px #2fdc08, 0 0 #63e87d, 0 0 #63e87d;
   }
 }
+
+/*USERNAME DISPLAY*/
+#usernameDisplay {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: lighter;
+  color: #ffffff;
+  font-size: 16p;
+  position: absolute;
+  right: 10%;
+}
