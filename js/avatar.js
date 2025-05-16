@@ -10,15 +10,15 @@ function updateAvatar() {
   let avatarSrc;
 
   if (userLvl >= 5) {
-    avatarSrc = "/avatars/lvl5.png";
+    avatarSrc = "avatars/lvl5.png";
   } else if (userLvl >= 4) {
-    avatarSrc = "/avatars/lvl4.png";
+    avatarSrc = "avatars/lvl4.png";
   } else if (userLvl >= 3) {
-    avatarSrc = "/avatars/lvl3.png";
+    avatarSrc = "avatars/lvl3.png";
   } else if (userLvl >= 2) {
-    avatarSrc = "/avatars/lvl2.png";
+    avatarSrc = "avatars/lvl2.png";
   } else {
-    avatarSrc = "/avatars/lvl1.png";
+    avatarSrc = "avatars/lvl1.png";
   }
 
   avatar.src = avatarSrc;
