@@ -6,7 +6,7 @@ body {
   min-height: 100vh;
 }
 
-main{
+main {
   flex: 1;
 }
 
@@ -1039,4 +1039,7 @@ body {
     flex: 1;
   }
 
+  #usernameDisplay {
+    opacity: 0;
+  }
 }
