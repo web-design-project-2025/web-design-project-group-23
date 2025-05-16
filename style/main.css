@@ -328,11 +328,22 @@ main {
 }
 
 /* Planner Page */
+
+.plannerInfo{
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+}
+
 #selectedDate {
   display: flex;
   padding: 1%;
   font-family: "Source Sans 3", sans-serif;
   color: #ffffff;
+  font-size: xx-large;
 }
 
 #confirmButton {
@@ -343,17 +354,26 @@ main {
   font-family: "Source Sans 3", sans-serif;
   color: #ffffff;
   font-weight: bold;
+  font-size: x-large;
   margin-bottom: 1rem;
+}
+
+.workoutTable{
+  display: flex;
+  align-items: flex-start;
+  margin-right: 0;
+  color: #1d2d33;
 }
 
 #addButton {
   display: block;
-  background-color: #63e87d;
-  border-radius: 12px;
+  background-color: #ffffff;
+  border-radius: 8px;
   border: none;
   font-family: "Source Sans 3", sans-serif;
-  color: #ffffff;
+  color: #ff4800;
   font-weight: bold;
+  font-size: x-large;
   margin-bottom: 1rem;
 }
 
@@ -373,7 +393,7 @@ main {
   font-size: large;
   padding: 15px;
   cursor: pointer;
-  margin-top: 20%;
+  margin-top: 2rem;
 }
 
 .remove-button {
@@ -386,7 +406,12 @@ main {
   color: #ff4800;
   text-align: center;
   cursor: pointer;
-  padding: 10%;
+  padding: 1rem;
+}
+
+.xp-container{
+  display: flex;
+  margin-bottom: 10rem;
 }
 
 .next-button {
@@ -399,8 +424,8 @@ main {
   font-size: large;
   padding: 15px;
   cursor: pointer;
-  margin-top: 20%;
-  margin-bottom: 20%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .dw {

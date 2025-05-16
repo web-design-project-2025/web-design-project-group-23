@@ -37,19 +37,17 @@
       </div>
     </nav>
 
-    
+
 <main>
+  <div class="plannerInfo">
     <h2 id="selectedDate"></h2>
-    <tr>
-      <td>
         <div class="buttonWraper">
           <button id="addButton">Add Exercise &plus;</button>
           <button id="confirmButton">Confirm &checkmark;</button>
         </div>
-      </td>
-    </tr>
-
+  </div>
     
+<div class="workoutTable">
       <table class="planner">
         <thead>
           <tr>
@@ -64,18 +62,15 @@
         <!-- Input fields -->
         <tbody>
           <tr>
-            <td data-label="Exercise">
-              <select name="selection" class="exerciseList"></select>
-            </td>
+            <td data-label="Exercise"><select name="selection" class="exerciseList"></select></td>
             <td data-label="Sets"><input class="sets" type="number" /></td>
             <td data-label="Reps"><input class="reps" type="number" /></td>
             <td data-label="Weight"><input class="weight" type="number" /></td>
-            <td data-label="Duration">
-              <input class="duration" type="number" />
-            </td>
+            <td data-label="Duration"><input class="duration" type="number" /></td>
           </tr>
         </tbody>
       </table>
+    </div>
     </main>
 
     <div id="xp-container">
