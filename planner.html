@@ -26,7 +26,6 @@
     <nav>
       <p>Planner</p>
       <div class="icons">
-        <a href="workout.html"><img src="/icons/workout.png" alt="" /></a>
         <a href="calendar.html"><img src="/icons/schedule.png" alt="" /></a>
         <a href="news.html"><img src="/icons/news.png" alt="" /></a>
         <a href="profile.html"><img src="/icons/user.png" alt="" /></a>
@@ -35,15 +34,15 @@
     </nav>
 
     <h2 id="selectedDate"></h2>
-     <tr>
-          <td>
-            <div class="buttonWraper">
-              <button id="addButton">Add Exercise &plus;</button>
-              <button id="confirmButton">Confirm &checkmark;</button>
-            </div>
-          </td>
-        </tr>
-    <main>    
+    <tr>
+      <td>
+        <div class="buttonWraper">
+          <button id="addButton">Add Exercise &plus;</button>
+          <button id="confirmButton">Confirm &checkmark;</button>
+        </div>
+      </td>
+    </tr>
+    <main>
       <table class="planner">
         <thead>
           <tr>
@@ -57,17 +56,19 @@
 
         <!-- Input fields -->
         <tbody>
-        <tr>
-          <td data-label="Exercise"><select name="selection" class="exerciseList"></select></td>
-          <td data-label="Sets"><input class="sets" type="number" /></td>
-          <td data-label="Reps"><input class="reps" type="number" /></td>
-          <td data-label="Weight"><input class="weight" type="number" /></td>
-          <td data-label="Duration"><input class="duration" type="number" /></td>
-        </tr>
-
+          <tr>
+            <td data-label="Exercise">
+              <select name="selection" class="exerciseList"></select>
+            </td>
+            <td data-label="Sets"><input class="sets" type="number" /></td>
+            <td data-label="Reps"><input class="reps" type="number" /></td>
+            <td data-label="Weight"><input class="weight" type="number" /></td>
+            <td data-label="Duration">
+              <input class="duration" type="number" />
+            </td>
+          </tr>
         </tbody>
       </table>
-
     </main>
     <div id="xp-container">
       <label class="levelDisplay">Level <span id="xp-text"></span></label>
@@ -102,5 +103,6 @@
     <script src="/js/saveWorkout.js"></script>
     <script src="/js/addTable.js"></script>
     <script src="/js/avatar.js"></script>
+    <script src="/js/progress.js"></script>
   </body>
 </html>
