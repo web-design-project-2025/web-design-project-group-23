@@ -812,7 +812,7 @@ body {
   overflow: hidden;
   height: 30px;
   box-shadow: 0 0 20px rgba(14, 213, 47, 0.9);
-  animation: glow 5s infinite alternate;
+  animation: glow 2s infinite alternate-reverse;
 }
 
 #xp-bar {
@@ -842,7 +842,7 @@ body {
     box-shadow: 0 0 40px #63e87d, 0 0 #63e87d, 0 0 #63e87d;
   }
   to {
-    box-shadow: 0 0 15px #2fdc08, 0 0 #63e87d, 0 0 #63e87d;
+    box-shadow: 0 0 20px #2fdc08, 0 0 #63e87d, 0 0 #63e87d;
   }
 }
 
