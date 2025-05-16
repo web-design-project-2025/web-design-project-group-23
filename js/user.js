@@ -19,6 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     localStorage.setItem("userProfile", JSON.stringify(userProfile));
     alert("Login succesful!");
-    window.location.href = "index.html";
+    window.location.href = "home.html";
   });
 });

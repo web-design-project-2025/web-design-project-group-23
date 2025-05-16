@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
     <link rel="stylesheet" href="/style/main.css" />
     <title>Shape Tale</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,64 +14,41 @@
     <script src="/js/init.js"></script>
   </head>
 
-  <body>
+  <body class="loginPage">
     <header class="header">
       <a href="index.html">
-        <img class="logo" src="images/logo.png" alt="Shape Tale Logo"
+        <img class="loginLogo" src="images/logo.png" alt="Shape Tale Logo"
       /></a>
-      <h3 id="usernameDisplay"></h3>
-      <div class="profileCircle">
-        <img id="profileAvatar" src="avatars/lvl1.png" alt="Profile Avatar" />
-      </div>
     </header>
 
-    <nav>
-      <p>Home Page</p>
-      <div class="icons">
-        <a href="calendar.html"><img src="/icons/schedule.png" alt="" /></a>
-        <a href="news.html"><img src="/icons/news.png" alt="" /></a>
-        <a href="profile.html"><img src="/icons/BMI.png" alt="" /></a>
-        <a href=""><img src="/icons/settings.png" alt="" /></a>
-      </div>
-    </nav>
     <main>
-      <div id="xp-container">
-        <label class="levelDisplay">Level <span id="xp-text"></span></label>
-        <div id="xp-bar-wrapper">
-          <div id="xp-bar"></div>
-        </div>
-      </div>
+      <div class="loginContainer">
+        <form id="loginForm">
+          <div class="inputBox">
+            <h3>Welcome Back!</h3>
+            <input
+              type="text"
+              id="username"
+              class="accountInput"
+              placeholder="Username"
+            />
+            <input
+              type="password"
+              id="password"
+              class="accountInput"
+              placeholder="Password"
+            />
+            <button type="button" id="loginBtn" class="button-style">
+              Login
+            </button>
 
-      <div class="workoutImage">
-        <img src="images/Workout1.jpg" alt="image deadlift" />
+            <a href="">Forgot password?</a>
+          </div>
+        </form>
       </div>
     </main>
-
-    <footer>
-      <div class="footer-column">
-        <p>© 2025 ShapeTale AB</p>
-      </div>
-
-      <div class="footer-column">
-        <h3>Contact</h3>
-        <ul>
-          <a href=""><li>Customer Service</li></a>
-          <a href=""><li>Careers</li></a>
-          <a href=""><li>Terms of Service</li></a>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h3>About Us</h3>
-        <ul>
-          <a href=""><li>Our Mission</li></a>
-          <a href=""><li>Our Partners</li></a>
-          <a href=""><li>Data Collection</li></a>
-        </ul>
-      </div>
-    </footer>
     <script src="/js/loadHandler.js"></script>
     <script src="/js/avatar.js"></script>
-    <script src="/js/progress.js"></script>
+    <script src="/js/user.js"></script>
   </body>
 </html>
