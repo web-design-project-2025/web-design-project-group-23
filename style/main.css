@@ -6,6 +6,10 @@ body {
   min-height: 100vh;
 }
 
+main{
+  flex: 1;
+}
+
 footer {
   background-color: #ff4800;
   display: flex;
