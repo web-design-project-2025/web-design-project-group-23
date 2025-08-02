@@ -85,6 +85,14 @@ header {
   gap: 0.5em;
   padding: 0%;
 }
+
+.icons a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
 .icons img {
   width: 30px;
 }
@@ -104,6 +112,10 @@ nav {
 
 nav a {
   margin-top: 10%;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: xx-small;
 }
 .headerlogo {
   font-family: Medium;
@@ -883,7 +895,7 @@ body {
     width: 200px;
   }
 
-  
+
   /* Calendar Page */
   .calendar {
     width: 80%;
