@@ -929,6 +929,7 @@ body {
     width: 80%;
     padding: 0.5rem;
     overflow-x: auto;
+    margin: 0 auto;
   }
 
   .calendarGrid {
