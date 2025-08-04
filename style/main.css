@@ -1065,17 +1065,9 @@ body {
   }
 
   footer {
-    flex-direction: row;
-    align-items: baseline;
-    gap: 1rem;
+    font-size: 65%;
   }
-  .footer-column {
-    width: 100%;
-    flex-direction: row;
-    align-items: flex-start;
-    width: 100%;
-    text-align: center;
-  }
+
   main {
     flex: 1;
   }
