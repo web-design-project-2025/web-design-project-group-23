@@ -341,21 +341,49 @@ main {
 
 /* Planner Page */
 
-.plannerInfo{
+.plannerPage{
   display: flex;
-  margin-bottom: 1rem;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
-  align-items: flex-start;
+}
+
+.plannerInfo{
+  text-align: center;
+  gap: 1rem;
+  align-items: center;
   justify-content: center;
-  padding: 2rem;
 }
 
 #selectedDate {
-  display: flex;
+  align-items: center;
   padding: 1%;
   font-family: "Source Sans 3", sans-serif;
   color: #ffffff;
   font-size: xx-large;
+}
+
+.workoutTable{
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+  color: #1d2d33;
+}
+
+
+.planner{
+  width: 100%;
+  max-width: 900px;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: large;
+  color: #ffffff;
+}
+
+.buttonWraper{
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 #confirmButton {
@@ -368,13 +396,7 @@ main {
   font-weight: bold;
   font-size: x-large;
   margin-bottom: 1rem;
-}
-
-.workoutTable{
-  display: flex;
-  align-items: flex-start;
-  margin-right: 0;
-  color: #1d2d33;
+  cursor: pointer;
 }
 
 #addButton {
@@ -387,7 +409,10 @@ main {
   font-weight: bold;
   font-size: x-large;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
+
+
 
 /* Workout Page */
 .dw {
