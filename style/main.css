@@ -86,11 +86,10 @@ header {
   padding: 0%;
 }
 
-.icons a{
+.icons a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .icons img {
@@ -341,14 +340,14 @@ main {
 
 /* Planner Page */
 
-.plannerPage{
+.plannerPage {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
 
-.plannerInfo{
+.plannerInfo {
   text-align: center;
   gap: 1rem;
   align-items: center;
@@ -363,15 +362,14 @@ main {
   font-size: xx-large;
 }
 
-.workoutTable{
+.workoutTable {
   display: flex;
   align-items: center;
   margin-right: 0;
   color: #1d2d33;
 }
 
-
-.planner{
+.planner {
   width: 100%;
   max-width: 900px;
   font-family: "Source Sans 3", sans-serif;
@@ -379,7 +377,7 @@ main {
   color: #ffffff;
 }
 
-.buttonWraper{
+.buttonWraper {
   display: flex;
   justify-content: center;
   padding-top: 2rem;
@@ -411,8 +409,6 @@ main {
   margin-bottom: 1rem;
   cursor: pointer;
 }
-
-
 
 /* Workout Page */
 .dw {
@@ -446,7 +442,7 @@ main {
   padding: 1rem;
 }
 
-.xp-container{
+.xp-container {
   display: flex;
   margin-bottom: 10rem;
 }
@@ -889,8 +885,10 @@ body {
   font-weight: lighter;
   color: #ffffff;
   font-size: 16p;
-  position: absolute;
-  right: 10%;
+  position: relative;
+  margin: 0 1rem;
+  margin-top: 0.5em;
+  white-space: nowrap;
 }
 .stat input {
   padding: 0.5rem;
@@ -1081,8 +1079,12 @@ body {
   main {
     flex: 1;
   }
-  
-  .usernameDisplay{
+
+  .usernameDisplay {
     padding: 10%;
+    position: static;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 0.5rem;
   }
 }
