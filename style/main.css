@@ -965,16 +965,7 @@ body {
     padding: 8px;
   }
   footer {
-    flex-direction: row;
-    align-items: baseline;
     gap: 1rem;
-  }
-  .footer-column {
-    width: 100%;
-    flex-direction: row;
-    align-items: flex-start;
-    width: 100%;
-    text-align: center;
   }
 
   @media (max-width: 550px) {
